@@ -186,7 +186,7 @@ export default defineComponent({
     display: flex;
     align-items: center;
     font-size: 14px;
-    border: 1px solid rgba(219, 219, 219, 1)
+    border: 1px solid rgba(219, 219, 219, 1);
 }
 
 .remove-item {
@@ -213,7 +213,7 @@ export default defineComponent({
     border-radius: 4px;
     width: calc(100%);
     z-index: 1;
-    max-height: 290px;
+    max-height: 287px;
     overflow-y: auto;
     overflow-x: hidden;
     box-shadow: 0px 1px 8px 0px rgba(102, 102, 102, 0.25);
@@ -232,6 +232,8 @@ li {
     background-color: #f4f8f9;
     color: #4c657c;
     height: 20px;
+    cursor: pointer;
+
 }
 
 li:hover {

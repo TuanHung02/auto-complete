@@ -52,6 +52,7 @@ export default defineComponent({
     };
   },
 });
+
 </script>
 <style scoped>
 .auto-complete-container {
