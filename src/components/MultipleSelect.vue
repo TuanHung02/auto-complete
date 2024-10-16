@@ -213,7 +213,7 @@ export default defineComponent({
     border-radius: 4px;
     width: calc(100%);
     z-index: 1;
-    max-height: 300px;
+    max-height: 290px;
     overflow-y: auto;
     overflow-x: hidden;
     box-shadow: 0px 1px 8px 0px rgba(102, 102, 102, 0.25);

@@ -11,7 +11,7 @@ import { ref, defineComponent, onMounted } from 'vue';
 import MultipleSelect from './components/MultipleSelect.vue';
 import axios from 'axios';
 
-interface TagItem {
+export interface TagItem {
   id: number;
   name: string;
 }
