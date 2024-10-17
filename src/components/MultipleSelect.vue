@@ -134,9 +134,15 @@ export default defineComponent({
 
 
 <style lang="css" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
 .multiple-select {
     position: relative;
     box-sizing: border-box;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .input-container {
@@ -147,8 +153,8 @@ export default defineComponent({
     gap: 8px;
     align-items: center;
     padding: 8px 10px;
-    border: 1px solid #dedfdf;
-    background: #f4f8f9;
+    border: 1px solid rgba(219, 219, 219, 1);
+    background: rgba(229, 249, 255, 0.2);
     border-radius: 4px;
 
     &:hover {
@@ -158,10 +164,11 @@ export default defineComponent({
     input {
         outline: none;
         border: none;
-        background: #f4f8f9;
-        font-family: Noto Sans;
-        font-size: 14px;
-        font-weight: 400;
+        background: rgba(229, 249, 255, 0.2);
+        font-family: "Noto Sans JP", sans-serif !important;
+        font-optical-sizing: auto !important;
+        font-weight: 400 !important;
+        font-style: normal !important;
         line-height: 20px;
         text-align: left;
         margin: 4.5px 0;
@@ -173,24 +180,26 @@ export default defineComponent({
     flex-wrap: wrap;
     align-items: center;
     flex-grow: 1;
-    gap: 5px;
+    gap: 4px;
 
 }
 
 .selected-item {
     background-color: rgba(240, 244, 248, 1);
     color: rgba(98, 125, 152, 1);
-    padding: 6px;
+    padding: 6px 8px;
     font-weight: 400;
     border-radius: 4px;
     display: flex;
     align-items: center;
     font-size: 14px;
-    border: 1px solid rgba(219, 219, 219, 1);
+    line-height: 16px;
+    border: 1px solid rgba(220, 220, 220, 1);
+    box-sizing: border-box;
 }
 
 .remove-item {
-    margin-left: 10px;
+    margin-left: 8px;
     cursor: pointer;
     font-weight: bold;
 }
@@ -227,12 +236,13 @@ ul {
 }
 
 li {
-    padding: 10.5px;
+    padding: 8px 10px;
     transition: background-color 0.3s ease;
-    background-color: #f4f8f9;
-    color: #4c657c;
-    height: 20px;
+    background-color: rgba(241, 245, 248, 1);
+    color: rgba(72, 101, 129, 1);
     cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
 
 }
 
