@@ -193,8 +193,9 @@ export default defineComponent({
     display: flex;
     align-items: center;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 20px;
     border: 1px solid rgba(220, 220, 220, 1);
+    height: 32px;
     box-sizing: border-box;
 }
 
