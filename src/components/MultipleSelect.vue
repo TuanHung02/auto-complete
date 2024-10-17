@@ -1,7 +1,7 @@
 <template>
     <div class="multiple-select" ref="dropdownRef">
         <div class="input-container">
-            <div style="width: 18px">
+            <div style="width: 18px; height: 18px;">
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
                     width="18" height="18" x="0" y="0" viewBox="0 0 612.01 612.01"
                     style="enable-background:new 0 0 512 512" xml:space="preserve" class="svg-search">
