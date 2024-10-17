@@ -156,6 +156,7 @@ export default defineComponent({
     border: 1px solid rgba(219, 219, 219, 1);
     background: rgba(229, 249, 255, 0.2);
     border-radius: 4px;
+    min-height: 32px;
 
     &:hover {
         border: 1px solid #9cbdce;
@@ -227,7 +228,7 @@ export default defineComponent({
     overflow-y: auto;
     overflow-x: hidden;
     box-shadow: 0px 1px 8px 0px rgba(102, 102, 102, 0.25);
-    margin-top: 5px;
+    margin-top: 3px;
 }
 
 ul {
