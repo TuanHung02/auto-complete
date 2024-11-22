@@ -79,17 +79,18 @@ export default defineComponent({
         });
 
         const toggleSelectItem = (item: TagItem) => {
-            let newSelectedItems: TagItem[] = [...selectedItems.value];
-            if (selectedItems.value.includes(item)) {
-                newSelectedItems = selectedItems.value.filter(i => i.id !== item.id);
-            } else {
-                newSelectedItems = [...selectedItems.value, item];
+            const newSelectedItems = selectedItems.value.filter(i => i.id !== item.id);
+
+            if (newSelectedItems.length === selectedItems.value.length) {
+                newSelectedItems.push(item);
             }
 
             selectedItems.value = newSelectedItems;
             filterText.value = '';
             props.onChange(newSelectedItems);
         };
+
+
 
         const handleInputClick = (e: MouseEvent) => {
             e.stopPropagation();
