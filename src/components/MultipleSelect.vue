@@ -5,14 +5,8 @@
                 <SearchIcon />
             </div>
             <div class="selected-items">
-                <div v-for="item in selectedItems" :key="item.id" class="selected-item">
-                    {{ item.name }}
-                    <span class="remove-item" @click.stop="removeSelectedItem(item)">
-                        <i class="fa-solid fa-xmark"></i>
-                    </span>
-                </div>
-                <input type="text" placeholder="Nhập tên thành phố để tìm kiếm..." v-model="filterText"
-                    @click="handleInputClick" />
+                <SelectedList :selectedItems="selectedItems" @removeItem="removeSelectedItem" />
+                <InputValue v-model="filterText" :placeholder="'Nhập tên thành phố...'" @click="handleInputClick" />
             </div>
         </div>
         <DropdownMenu :dropdownOpen="dropdownOpen" :filterText="filterText" :items="filteredItems"
@@ -24,6 +18,9 @@
 import { ref, computed, watch, onMounted, onBeforeUnmount } from "vue";
 import SearchIcon from "./icons/SearchIcon.vue";
 import DropdownMenu from "./DropdownMenu.vue";
+import InputValue from "./InputValue.vue";
+import SelectedList from "./SelectedList.vue";
+
 export interface TagItem {
     id: number;
     name: string;
@@ -120,63 +117,12 @@ watch(
     background: rgba(229, 249, 255, 0.2);
     border-radius: 4px;
     min-height: 32px;
-
-    &:hover {
-        border: 1px solid rgba(25, 145, 210, 1);
-    }
-
-    input {
-        outline: none;
-        border: none;
-        background: rgba(229, 249, 255, 0.2);
-        font-family: "Noto Sans JP", sans-serif !important;
-        font-optical-sizing: auto !important;
-        font-weight: 400 !important;
-        font-style: normal !important;
-        line-height: 20px;
-        text-align: left;
-        margin: 4.5px 0;
-    }
 }
 
 .selected-items {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    flex-grow: 1;
     gap: 4px;
-
-}
-
-.selected-item {
-    background-color: rgba(240, 244, 248, 1);
-    color: rgba(98, 125, 152, 1);
-    padding: 6px 8px;
-    font-weight: 400;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    line-height: 20px;
-    border: 1px solid rgba(220, 220, 220, 1);
-    height: 32px;
-    box-sizing: border-box;
-}
-
-.remove-item {
-    margin-left: 8px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.remove-item i:hover {
-    color: rgb(219, 46, 46);
-}
-
-.input-container input {
-    border: none;
-    outline: none;
-    flex-grow: 1;
 }
 
 .arrow {

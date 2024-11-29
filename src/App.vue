@@ -26,7 +26,7 @@ export default defineComponent({
 
     // Hàm xử lý sự thay đổi khi chọn thẻ
     const handleSelectTags = (selectedTags: TagItem[]) => {
-      tagsSelected.value = selectedTags; // Cập nhật state tagsSelected
+      tagsSelected.value = selectedTags;
     };
     // Hàm gọi API để lấy dữ liệu tagItems
     const fetchTagItems = async () => {
@@ -40,7 +40,6 @@ export default defineComponent({
     };
 
     console.log(tagItems.value);
-    // Gọi API khi component được mounted
     onMounted(() => {
       fetchTagItems();
     });
